@@ -85,6 +85,7 @@ class _ScienceScreenState extends State<ScienceScreen> {
                      child: SizedBox(
                         height: 250,
                         child: ListView.separated(
+                          shrinkWrap: true,
                           itemCount: 3,
                           scrollDirection: Axis.horizontal,
                           physics: BouncingScrollPhysics(),

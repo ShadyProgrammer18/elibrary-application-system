@@ -50,6 +50,7 @@ class _EngineeringScreenState extends State<EngineeringScreen> {
                      child: SizedBox(
                         height: 250,
                         child: ListView.separated(
+                          shrinkWrap: true,
                           itemCount: 3,
                           scrollDirection: Axis.horizontal,
                           physics: BouncingScrollPhysics(),

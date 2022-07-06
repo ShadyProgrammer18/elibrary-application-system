@@ -15,11 +15,12 @@ class _OverviewScreenState extends State<OverviewScreen> {
   Widget build(BuildContext context) {
     
     return Scaffold(
+      backgroundColor: Colors.white,
     body: SingleChildScrollView(
       physics: AlwaysScrollableScrollPhysics(),
       child: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+        child: ListView(
+          shrinkWrap: true,
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 20, 209, 10),
@@ -34,6 +35,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
              SizedBox(
                       height: 200,
                       child: ListView.separated(
+                        shrinkWrap: true,
                         itemCount: 4,
                         scrollDirection: Axis.horizontal,
                         physics: BouncingScrollPhysics(),
@@ -61,55 +63,164 @@ class _OverviewScreenState extends State<OverviewScreen> {
                        
                        ),
                     ),  
-                    Padding(
-                      padding: const EdgeInsets.only(top: 20),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Trending',
-                            style: TextStyle(
-                            color: Color(0xff4D4D4D),
-                            fontSize: 16
-                            ),
-                          ),
-                               Padding(
-                                padding: const EdgeInsets.only(right: 20),
-                                child: TextButton( onPressed: ()=> Navigator.pushReplacement(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (_) => SeeAllScreen(),
-                                 ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Trending',
+                                style: TextStyle(
+                                color: Color(0xff4D4D4D),
+                                fontSize: 16
                                 ),
-                                child:  Text(
-                                       "See All",
-                                       style: TextStyle(
-                                         color: Color(0xff314CB6),
-                                         fontSize: 16,
-                                       ),
+                              ),
+                                   Padding(
+                                    padding: const EdgeInsets.only(right: 20),
+                                    child: TextButton( onPressed: ()=> Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (_) => SeeAllScreen(),
                                      ),
+                                    ),
+                                    child:  Text(
+                                           "See All",
+                                           style: TextStyle(
+                                             color: Color(0xff314CB6),
+                                             fontSize: 16,
+                                           ),
+                                         ),
+                                    ),
+                                  ),
+                                
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 80,
+                          width: 323,
+                          color: Colors.white,
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 5),
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  color: Color(0xffEFBDEB),
                                 ),
                               ),
-                              ListView.builder(
-                                itemCount: 3,
-                                scrollDirection: Axis.horizontal,
-                               itemBuilder: (context, index)
-                      {
-                        return Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Container(
-                            width: 80,
-                            height: 323,
-                              decoration: BoxDecoration(
-                              color: Colors.red,
-                               ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 20 , left: 10),
+                                    child: Text('Book Name',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    )
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 20, left: 10 ),
+                                    child: Text('Book author',
+                                    style: TextStyle(
+                                      color: Color(0xff4D4D4D),
+                                    )
+                                    ),
+                                  ),
 
-                          ),
-                        );
-                      }, 
+                                ],
+                              )
+                            ],
+                          )
+                        ),
+                        SizedBox(height: 10,),
+                         Container(
+                          height: 80,
+                          width: 323,
+                          color: Colors.white,
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 5),
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  color: Color(0xffEFBDEB),
+                                ),
                               ),
-                        ],
-                      ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 20 , left: 10),
+                                    child: Text('Book Name',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    )
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 20, left: 10 ),
+                                    child: Text('Book author',
+                                    style: TextStyle(
+                                      color: Color(0xff4D4D4D),
+                                    )
+                                    ),
+                                  ),
+
+                                ],
+                              )
+                            ],
+                          )
+                        ),
+                        SizedBox(height: 10,),
+                         Container(
+                          height: 80,
+                          width: 323,
+                          color: Colors.white,
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(left: 5),
+                                child: Container(
+                                  width: 50,
+                                  height: 50,
+                                  color: Color(0xffEFBDEB),
+                                ),
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 20 , left: 10),
+                                    child: Text('Book Name',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                    )
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(bottom: 20, left: 10 ),
+                                    child: Text('Book author',
+                                    style: TextStyle(
+                                      color: Color(0xff4D4D4D),
+                                    )
+                                    ),
+                                  ),
+
+                                ],
+                              )
+                            ],
+                          )
+                        ),
+                      ],
                     ),  
           ],
         )

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_elibrary_project/screens/store_screen.dart';
 import 'package:flutter_elibrary_project/screens/home_screen.dart';
-import 'package:flutter_elibrary_project/screens/library_screeen.dart';
+import 'package:flutter_elibrary_project/screens/library_screen.dart';
 import 'package:flutter_elibrary_project/screens/profile_screen.dart';
 
 class ButtomNavbar extends StatefulWidget {

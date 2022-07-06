@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                      ), 
                       ),
                       SizedBox(height: 10),
-                      Text('Offodile Dozie',
+                      Text('Offodile Dozie 2017/5713',
                       style: TextStyle(
                        color: Color(0xff4D4D4D),
                        fontSize: 18,
@@ -46,14 +46,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 150, top: 20),
-                  child: IconButton(icon:  Icon(Icons.notifications_none,
-                   size: 35,
-                  color: Color(0xff4D4D4D),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 70, top: 20),
+                    child: IconButton(icon:  Icon(Icons.notifications_none,
+                     size: 35,
+                    color: Color(0xff4D4D4D),
+                    ),
+                    onPressed: () {},
+                    )
                   ),
-                  onPressed: () {},
-                  )
                 ),
               ],
             ),
@@ -187,25 +189,57 @@ class _HomeScreenState extends State<HomeScreen> {
                             fontSize: 16
                             ),
                           ),
-                              TextButton( onPressed: ()=> Navigator.pushReplacement(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (_) => SeeAllScreen(),
-                                 ),
-                                ),
-                                child:  Text(
-                                       "See all",
-                                       style: TextStyle(
-                                         color: Color(0xff314CB6),
-                                         fontSize: 16,
+                              Padding(
+                                padding: const EdgeInsets.only(right: 20),
+                                child: TextButton( onPressed: ()=> Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => SeeAllScreen(),
+                                   ),
+                                  ),
+                                  child:  Text(
+                                         "See all",
+                                         style: TextStyle(
+                                           color: Color(0xff314CB6),
+                                           fontSize: 16,
+                                         ),
                                        ),
-                                     ),
-                                ),
+                                  ),
+                              ),
                         ],
                       ),
                     ),  
                       
-                           
+                       SizedBox(
+                      height: 250,
+                      child: ListView.separated(
+                        itemCount: 4,
+                        scrollDirection: Axis.horizontal,
+                        physics: BouncingScrollPhysics(),
+                        itemBuilder: (context, index)
+                      {
+                        return Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Container(
+                            width: 170,
+                            height: 240,
+                              decoration: BoxDecoration(
+                              border: Border.all(
+                               color: Color(0xff4D4D4D),
+                               ),
+                               ),
+                          ),
+                        );
+                      }, 
+                      separatorBuilder: (context, index)
+                      {
+                        return SizedBox(
+                          width: 10,
+                        );
+                      },
+                       
+                       ),
+                    ),    
                       ],
                     ),
                   ),

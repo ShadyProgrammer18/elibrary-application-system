@@ -24,9 +24,8 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
           physics: AlwaysScrollableScrollPhysics(),
           child: Padding(
             padding: const EdgeInsets.only(top: 20, left: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+            child: ListView(
+             shrinkWrap: true,
           children: [
             Row(
               children: [
