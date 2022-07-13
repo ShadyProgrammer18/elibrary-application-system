@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_elibrary_project/model/categories.dart';
 
 class EngineeringScreen extends StatefulWidget {
   const EngineeringScreen({Key? key}) : super(key: key);
@@ -65,6 +66,10 @@ class _EngineeringScreenState extends State<EngineeringScreen> {
                                 border: Border.all(
                                  color: Color(0xff4D4D4D),
                                  ),
+                                 image: DecorationImage(
+                                image: AssetImage(engineering1[index].image),
+                                fit: BoxFit.fill
+                               )
                                  ),
                             ),
                           );
@@ -98,6 +103,10 @@ class _EngineeringScreenState extends State<EngineeringScreen> {
                                 border: Border.all(
                                  color: Color(0xff4D4D4D),
                                  ),
+                                 image: DecorationImage(
+                                image: AssetImage(engineering2[index].image),
+                                fit: BoxFit.fill
+                               )
                                  ),
                             ),
                           );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_elibrary_project/model/categories.dart';
 import 'package:flutter_elibrary_project/screens/see_all_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -157,6 +158,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               border: Border.all(
                                color: Color(0xff4D4D4D),
                                ),
+                               image: DecorationImage(
+                                image: AssetImage(overview[index].image),
+                                fit: BoxFit.fill
+                               )
                                ),
                           ),
                         );
@@ -227,6 +232,10 @@ class _HomeScreenState extends State<HomeScreen> {
                               border: Border.all(
                                color: Color(0xff4D4D4D),
                                ),
+                               image: DecorationImage(
+                                image: AssetImage(overview1[index].image),
+                                fit: BoxFit.fill
+                               )
                                ),
                           ),
                         );

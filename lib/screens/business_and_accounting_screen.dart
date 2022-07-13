@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_elibrary_project/model/categories.dart';
 
 class BusinessAndAccountingScreen extends StatefulWidget {
   const BusinessAndAccountingScreen({Key? key}) : super(key: key);
@@ -66,6 +67,10 @@ class _BusinessAndAccountingScreenState extends State<BusinessAndAccountingScree
                                 border: Border.all(
                                  color: Color(0xff4D4D4D),
                                  ),
+                                 image: DecorationImage(
+                                image: AssetImage(business1[index].image),
+                                fit: BoxFit.fill
+                               )
                                  ),
                             ),
                           );
@@ -100,6 +105,10 @@ class _BusinessAndAccountingScreenState extends State<BusinessAndAccountingScree
                                 border: Border.all(
                                  color: Color(0xff4D4D4D),
                                  ),
+                                 image: DecorationImage(
+                                image: AssetImage(business2[index].image),
+                                fit: BoxFit.fill
+                               )
                                  ),
                             ),
                           );

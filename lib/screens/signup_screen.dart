@@ -20,7 +20,7 @@ class _SignupScreenState extends State<SignupScreen> {
               children:[ 
                 SizedBox(height: 30,),
                 Padding(
-                  padding: const EdgeInsets.only(right: 220),
+                  padding: const EdgeInsets.only(right: 160),
                   child: Text('Register Here,',
                style: TextStyle(
                    color: Color(0xff4D4D4D),
@@ -31,7 +31,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
                  SizedBox(height: 20),
                            Padding(
-                             padding: const EdgeInsets.fromLTRB(20, 0, 40, 0),
+                             padding: const EdgeInsets.fromLTRB(10, 0, 30, 0),
                              child: Container(
                                height: 50,
                                padding: EdgeInsets.symmetric(horizontal: 15.0),
@@ -57,7 +57,7 @@ class _SignupScreenState extends State<SignupScreen> {
                            ),
                             SizedBox(height: 20),
                            Padding(
-                             padding: const EdgeInsets.fromLTRB(20, 0, 40, 0),
+                             padding: const EdgeInsets.fromLTRB(10, 0, 30, 0),
                              child: Container(
                                height: 50,
                                padding: EdgeInsets.symmetric(horizontal: 15.0),
@@ -83,7 +83,7 @@ class _SignupScreenState extends State<SignupScreen> {
                            ),
                             SizedBox(height: 20),
                            Padding(
-                             padding: const EdgeInsets.fromLTRB(20, 0, 40, 0),
+                             padding: const EdgeInsets.fromLTRB(10, 0, 30, 0),
                              child: Container(
                                height: 50,
                                padding: EdgeInsets.symmetric(horizontal: 15.0),
@@ -109,7 +109,7 @@ class _SignupScreenState extends State<SignupScreen> {
                            ),
                        SizedBox(height: 20),
                            Padding(
-                             padding: const EdgeInsets.fromLTRB(20, 0, 40, 0),
+                             padding: const EdgeInsets.fromLTRB(10, 0, 30, 0),
                              child: Container(
                                height: 50,
                                padding: EdgeInsets.symmetric(horizontal: 15.0),
@@ -136,7 +136,7 @@ class _SignupScreenState extends State<SignupScreen> {
     
                            SizedBox(height: 20),
                            Padding(
-                             padding: const EdgeInsets.fromLTRB(20, 0, 40, 0),
+                            padding: const EdgeInsets.fromLTRB(10, 0, 30, 0),
                              child: Container(
                                height: 50,
                                padding: EdgeInsets.symmetric(horizontal: 15.0),
@@ -171,7 +171,7 @@ class _SignupScreenState extends State<SignupScreen> {
                            ),
                           SizedBox(height: 20),
                            Padding(
-                             padding: const EdgeInsets.fromLTRB(20, 0, 40, 0),
+                             padding: const EdgeInsets.fromLTRB(10, 0, 30, 0),
                              child: Container(
                                height: 50,
                                padding: EdgeInsets.symmetric(horizontal: 15.0),
@@ -206,9 +206,9 @@ class _SignupScreenState extends State<SignupScreen> {
                            ),
     
                            
-                           
+                           SizedBox(height: 20),
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(20, 90, 40, 0),
+                             padding: const EdgeInsets.fromLTRB(10, 0, 30, 0),
                               child: Container(
                                   height: 50,
                                   width: 343,

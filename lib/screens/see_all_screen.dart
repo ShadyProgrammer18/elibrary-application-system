@@ -12,6 +12,8 @@ class SeeAllScreen extends StatefulWidget {
 class _SeeAllScreenState extends State<SeeAllScreen> {
   @override
   Widget build(BuildContext context) {
-     return Scaffold();
+     return Scaffold(
+      
+     );
   }
 }

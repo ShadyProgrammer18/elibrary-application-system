@@ -13,7 +13,6 @@ class ButtomNavbar extends StatefulWidget {
 
 class _ButtomNavbarState extends State<ButtomNavbar> {
   int selectedIndex = 0;
-  
  final screens = [
    HomeScreen(),
    StoreScreen(),

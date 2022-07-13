@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_elibrary_project/model/categories.dart';
 import 'package:flutter_elibrary_project/screens/see_all_screen.dart';
 
 class OverviewScreen extends StatefulWidget {
@@ -13,14 +14,11 @@ class OverviewScreen extends StatefulWidget {
 class _OverviewScreenState extends State<OverviewScreen> {
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       backgroundColor: Colors.white,
-    body: SingleChildScrollView(
-      physics: AlwaysScrollableScrollPhysics(),
-      child: SafeArea(
-        child: ListView(
-          shrinkWrap: true,
+    body: SafeArea(
+      child: SingleChildScrollView(
+        child: Column(
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 20, 209, 10),
@@ -50,6 +48,10 @@ class _OverviewScreenState extends State<OverviewScreen> {
                               border: Border.all(
                                color: Color(0xff4D4D4D),
                                ),
+                               image: DecorationImage(
+                                image: AssetImage(overview[index].image),
+                                fit: BoxFit.fill
+                               )
                                ),
                           ),
                         );
@@ -109,7 +111,15 @@ class _OverviewScreenState extends State<OverviewScreen> {
                                 child: Container(
                                   width: 50,
                                   height: 50,
-                                  color: Color(0xffEFBDEB),
+                                  decoration: BoxDecoration(
+                                border: Border.all(
+                                 color: Color(0xff4D4D4D),
+                                 ),
+                                 image: DecorationImage(
+                                image: AssetImage("assets/images/physics in biology and medicine.jpg"),
+                                fit: BoxFit.fill
+                               )
+                                 ),
                                 ),
                               ),
                               Column(
@@ -117,7 +127,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.only(top: 20 , left: 10),
-                                    child: Text('Book Name',
+                                    child: Text('Physics in biology and medicine',
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -125,14 +135,14 @@ class _OverviewScreenState extends State<OverviewScreen> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(bottom: 20, left: 10 ),
-                                    child: Text('Book author',
+                                    padding: const EdgeInsets.only(bottom: 20, right: 95 ),
+                                    child: Text('Paul Davidovits',
                                     style: TextStyle(
                                       color: Color(0xff4D4D4D),
                                     )
                                     ),
                                   ),
-
+      
                                 ],
                               )
                             ],
@@ -150,7 +160,15 @@ class _OverviewScreenState extends State<OverviewScreen> {
                                 child: Container(
                                   width: 50,
                                   height: 50,
-                                  color: Color(0xffEFBDEB),
+                                   decoration: BoxDecoration(
+                                border: Border.all(
+                                 color: Color(0xff4D4D4D),
+                                 ),
+                                 image: DecorationImage(
+                                image: AssetImage("assets/images/Mechanics of Composite Materials.jpg"),
+                                fit: BoxFit.fill,
+                               )
+                                 ),
                                 ),
                               ),
                               Column(
@@ -158,7 +176,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.only(top: 20 , left: 10),
-                                    child: Text('Book Name',
+                                    child: Text('Mechanics of Composite Materials',
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -166,14 +184,14 @@ class _OverviewScreenState extends State<OverviewScreen> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(bottom: 20, left: 10 ),
-                                    child: Text('Book author',
+                                    padding: const EdgeInsets.only(bottom: 20, right: 95 ),
+                                    child: Text('Robert M. Jones',
                                     style: TextStyle(
                                       color: Color(0xff4D4D4D),
                                     )
                                     ),
                                   ),
-
+      
                                 ],
                               )
                             ],
@@ -191,7 +209,15 @@ class _OverviewScreenState extends State<OverviewScreen> {
                                 child: Container(
                                   width: 50,
                                   height: 50,
-                                  color: Color(0xffEFBDEB),
+                                   decoration: BoxDecoration(
+                                border: Border.all(
+                                 color: Color(0xff4D4D4D),
+                                 ),
+                                 image: DecorationImage(
+                                image: AssetImage("assets/images/Modern Analytic Chemistry.jpg"),
+                                fit: BoxFit.fill
+                               )
+                                 ),
                                 ),
                               ),
                               Column(
@@ -199,7 +225,7 @@ class _OverviewScreenState extends State<OverviewScreen> {
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.only(top: 20 , left: 10),
-                                    child: Text('Book Name',
+                                    child: Text('Modern Analytic Chemistry',
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
@@ -207,14 +233,14 @@ class _OverviewScreenState extends State<OverviewScreen> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(bottom: 20, left: 10 ),
-                                    child: Text('Book author',
+                                    padding: const EdgeInsets.only(bottom: 20, right: 95 ),
+                                    child: Text('David T Harvey',
                                     style: TextStyle(
                                       color: Color(0xff4D4D4D),
                                     )
                                     ),
                                   ),
-
+      
                                 ],
                               )
                             ],
@@ -223,8 +249,8 @@ class _OverviewScreenState extends State<OverviewScreen> {
                       ],
                     ),  
           ],
-        )
-      ),
+        ),
+      )
     )
     );
   }

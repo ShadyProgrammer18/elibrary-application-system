@@ -18,6 +18,7 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
     TabController(length: 4, vsync: this, initialIndex: 0);
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
@@ -73,6 +74,7 @@ class _StoreScreenState extends State<StoreScreen> with SingleTickerProviderStat
                 ),
                  ),
                Container(
+                color: Colors.white,
                  width: double.maxFinite,
                 height: 2000,
                 child: TabBarView(
