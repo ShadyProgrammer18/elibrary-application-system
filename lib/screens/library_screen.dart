@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_elibrary_project/model/categories.dart';
 
 class LibraryScreen extends StatefulWidget {
   const LibraryScreen({ Key? key }) : super(key: key);
@@ -29,7 +30,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                      ), 
                       ),
                       SizedBox(height: 10),
-                      Text('Collection of Books',
+                      Text('Saved Books',
                       style: TextStyle(
                        color: Color(0xff4D4D4D),
                        fontSize: 18,
@@ -40,87 +41,77 @@ class _LibraryScreenState extends State<LibraryScreen> {
                   ),
                 ),
                 SizedBox(height: 20,),
-                Container(
-                     height: 2000,
-                      child: GridView(
-                        scrollDirection: Axis.vertical,
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(5.0),
-                            child: Container(
-                           width: 170,
+                 SizedBox(
+                      height: 230,
+                      child: ListView.separated(
+                        shrinkWrap: true,
+                        itemCount: 2,
+                        scrollDirection: Axis.horizontal,
+                        physics: BouncingScrollPhysics(),
+                        itemBuilder: (context, index)
+                      {
+                        return Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Container(
+                            width: 180,
                             height: 240,
-                        decoration: BoxDecoration(
-                        border: Border.all(
-                        color: Color(0xff4D4D4D),
-                      )
-                      ),
-                   ),
+                              decoration: BoxDecoration(
+                              border: Border.all(
+                               color: Color(0xff4D4D4D),
+                               ),
+                               image: DecorationImage(
+                                image: AssetImage(overview[index].image),
+                                fit: BoxFit.fill
+                               )
+                               ),
                           ),
-                   Padding(
-                     padding: const EdgeInsets.all(5.0),
-                     child: Container(
-                        height: 100,
-                           width: 170,
-                          decoration: BoxDecoration(
-                          border: Border.all(
-                          color: Color(0xff4D4D4D),
-                        )
-                        ),
-                     ),
-                   ),
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Container(
-                        height: 240,
-                           width: 170,
-                          decoration: BoxDecoration(
-                          border: Border.all(
-                          color: Color(0xff4D4D4D),
-                        )
-                        ),
-                   ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Container(
-                        height: 100,
-                           width: 170,
-                          decoration: BoxDecoration(
-                          border: Border.all(
-                          color: Color(0xff4D4D4D),
-                        )
-                        ),
-                   ),
-                    ),
-                   Padding(
-                     padding: const EdgeInsets.all(5.0),
-                     child: Container(
-                        height: 240,
-                           width: 170,
-                          decoration: BoxDecoration(
-                          border: Border.all(
-                          color: Color(0xff4D4D4D),
-                        )
-                        ),
-                     ),
-                   ),
-                   Padding(
-                     padding: const EdgeInsets.all(5.0),
-                     child: Container(
-                        height:100,
-                           width: 170,
-                          decoration: BoxDecoration(
-                          border: Border.all(
-                          color: Color(0xff4D4D4D),
-                        )
-                        ),
-                     ),
-                   ),
-                  ],
-                   ),
-                    ),
+                        );
+                      }, 
+                      separatorBuilder: (context, index)
+                      {
+                        return SizedBox(
+                          width: 10,
+                        );
+                      },
+                       
+                       ),
+                    ), 
+                    SizedBox(height: 20,),
+                 SizedBox(
+                      height: 230,
+                      child: ListView.separated(
+                        shrinkWrap: true,
+                        itemCount: 2,
+                        scrollDirection: Axis.horizontal,
+                        physics: BouncingScrollPhysics(),
+                        itemBuilder: (context, index)
+                      {
+                        return Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Container(
+                            width: 180,
+                            height: 240,
+                              decoration: BoxDecoration(
+                              border: Border.all(
+                               color: Color(0xff4D4D4D),
+                               ),
+                               image: DecorationImage(
+                                image: AssetImage(overview1[index].image),
+                                fit: BoxFit.fill
+                               )
+                               ),
+                          ),
+                        );
+                      }, 
+                      separatorBuilder: (context, index)
+                      {
+                        return SizedBox(
+                          width: 10,
+                        );
+                      },
+                       
+                       ),
+                    ),   
             ],
           ),
         ),
